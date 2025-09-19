@@ -1,0 +1,140 @@
+/* Base styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f3f4f6;
+    margin: 0;
+}
+
+/* Navbar styles */
+.navbar {
+    background: linear-gradient(90deg, #8947db, #9f78e8, #ead9ff);
+    padding: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+                0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    position: sticky;   
+    top: 0;             
+    z-index: 1000;     
+}
+
+
+.container {
+    max-width: 1152px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Brand and logo */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    color: #080808;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo {
+    height: 35px;   /* Adjust logo size */
+    margin-right: 10px;
+}
+
+/* Navbar links */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    color: hsl(0, 0%, 3%);
+    text-decoration: none;
+    font-weight: normal;
+    transition: color 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+.logout-link {
+    color: #060606;
+    font-weight: 500;
+}
+
+.logout-link:hover {
+    color: white;
+}
+
+.emoji {
+    margin-right: 0.25rem;
+}
+
+/* Content placeholder */
+.content {
+    max-width: 1152px;
+    margin: 2rem auto;
+    padding: 1rem;
+    text-align: center;
+    color: #4b5563;
+}
+
+/* Gallery Section */
+.gallery {
+  padding: 2rem 1rem;
+  max-width: 1152px;
+  margin: auto;
+  text-align: center;
+}
+
+.gallery h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Video Section */
+.video-section {
+  padding: 2rem 1rem 4rem;
+  text-align: center;
+  background: #f3f4f6;
+}
+
+.video-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.video-container {
+  max-width: 800px;
+  margin: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 450px;
+  border: none;
+}

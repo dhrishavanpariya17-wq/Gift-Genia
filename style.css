@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: url('gift6.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  backdrop-filter: blur(6px);
+}
+
+/* Main Container */
+.main-container {
+  display: flex;
+  width: 95%;
+  max-width: 950px;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 20px;
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Left Side Logo Panel */
+.side-logo {
+  width: 40%;
+  background: linear-gradient(160deg, #7835cb, #ead9ff);
+  color: #3a256f;
+  text-align: center;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.side-logo img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  object-fit: cover;
+  border: 3px solid #fff;
+}
+
+.side-logo h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #3a256f;
+}
+
+.side-logo p {
+  font-size: 15px;
+  color: #5f4a8c;
+}
+
+/* Right Side Form Panel */
+.form-container {
+  width: 60%;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.form .title {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #6b4bbf;
+}
+
+.input-field {
+  position: relative;
+  margin-top: 25px;
+  width: 100%;
+}
+
+.input-field input {
+  width: 100%;
+  padding: 12px 40px 12px 35px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #f7f3fb;
+  outline: none;
+  color: #3a256f;
+}
+
+.input-field input:focus {
+  border: 2px solid #b28dff;
+  background-color: #fff;
+}
+
+.input-field i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #6b4bbf;
+}
+
+.input-field .icon {
+  left: 10px;
+}
+
+.input-field .showHidePw {
+  right: 10px;
+  cursor: pointer;
+}
+
+.button input {
+  width: 100%;
+  padding: 12px;
+  background:#7835cb;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  margin-top: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button input:hover {
+  background: linear-gradient(135deg, #8c6aff, #6b4bbf);
+}
+
+.login-signup {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.login-signup .text {
+  font-size: 14px;
+  color: #444;
+}
+
+.login-signup a {
+  color: #6b4bbf;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-signup a:hover {
+  text-decoration: underline;
+}
+
+/* Options */
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.checkbox-text {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #3a256f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .side-logo,
+  .form-container {
+    width: 100%;
+    padding: 25px;
+  }
+
+  .side-logo {
+    border-bottom: 2px solid #ddd;
+  }
+}

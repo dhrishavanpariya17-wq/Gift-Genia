@@ -1,0 +1,228 @@
+/* ===============  BASIC RESET & THEME  =============== */
+:root{
+  --bg: #f3f4f6;
+  --text: #111827;
+  --muted: #6b7280;
+
+  --chip-bg: #ffffff;
+  --chip-border: #d1d5db;
+
+  --purple-50: #F3E8FF;
+  --purple-100:#EDE9FE;
+  --purple-200:#DDD6FE;
+  --purple-300:#C4B5FD;
+  --purple-400:#A78BFA;
+  --purple-500:#8B5CF6;
+  --purple-600:#7C3AED;
+  --purple-700:#6D28D9;
+  --purple-800:#6B21A8;
+
+  --brand: #7835cb; /* primary (matches your design) */
+}
+
+*{ box-sizing: border-box; }
+html,body{ height:100%; }
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  color: var(--text);
+  background:
+    linear-gradient(160deg, rgba(120,53,203,0.15), rgba(237,233,254,0.4)),
+    #fff;
+}
+
+/* ===============  PAGE BACKGROUND WITH BLUR  =============== */
+.page {
+  min-height: 100dvh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 24px;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* Blurred background layer */
+.page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('gift6.jpg') center/cover no-repeat fixed;
+  filter: blur(5px);
+  transform: scale(1.1); /* avoid cut edges after blur */
+  z-index: 0;
+}
+
+/* Card sits on top */
+.card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 64rem; /* ~max-w-4xl */
+  border-radius: 24px;
+  padding: 24px;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.95), rgba(245,243,255,0.95));
+  border: 1px solid rgba(220,200,255,0.5);
+  box-shadow: 0 20px 60px rgba(167,139,250,0.25);
+}
+
+@media (min-width: 640px){
+  .card{ padding: 40px; }
+}
+
+.card-head{
+  display:flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 640px){
+  .card-head{
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}
+
+.title{
+  font-size: clamp(1.5rem, 1.1rem + 1.3vw, 2rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: #0f172a;
+  margin:0;
+}
+
+.subtitle{
+  margin:0;
+  color: var(--muted);
+  font-size: 1.0625rem;
+}
+
+/* ===============  GROUPS  =============== */
+.filters{
+  display: grid;
+  gap: 28px;
+}
+
+.group{
+  margin:0;
+  padding:0;
+  border:0;
+}
+
+.group-title{
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 12px;
+}
+
+/* ===============  CHIPS  =============== */
+.chips{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Hide native inputs, keep them accessible */
+.chip-input{
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Base chip */
+.chip{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 10px 16px;
+  background: var(--chip-bg);
+  color: #374151;
+  border: 2px solid var(--chip-border);
+  border-radius: 999px;
+  cursor: pointer;
+  user-select: none;
+  transition: transform .08s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease, border-color .2s ease,;
+  white-space: nowrap;
+}
+
+.chip:hover{
+  background-color: #b9a6f2;  /* gentle purple hover */
+  color: #4A0E4E;
+  border-color: var(--brand);
+}
+
+/* Selected state using :checked + label */
+.chip-input:checked + .chip{
+  background-color: var(--brand);
+  color: #fff;
+  border-color: var(--purple-400);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08), 0 4px 10px rgba(0,0,0,0.06);
+}
+
+/* Focus ring for accessibility */
+.chip-input:focus + .chip{
+  outline: 3px solid var(--purple-300);
+  outline-offset: 2px;
+}
+
+/* ===============  ACTIONS  =============== */
+.actions{
+  display:flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.btn{
+  appearance: none;
+  border-radius: 999px;
+  padding: 12px 22px;
+  font-weight: 700;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: background-color .2s ease, border-color .2s ease, transform .08s ease;
+}
+
+/* Primary button */
+.btn-primary{
+  background-color: var(--brand);
+  color: #fff;
+  border-color: var(--purple-500);
+}
+.btn-primary:hover{
+  background-color: var(--purple-600);
+  border-color: var(--purple-600);
+}
+
+/* Ghost / secondary button */
+.btn-ghost{
+  background-color: var(--purple-50);
+  color: var(--purple-700);
+  border-color: var(--purple-400);
+}
+.btn-ghost:hover{
+  background-color: var(--purple-100);
+  border-color: var(--purple-300);
+}
+
+/* Subtle press effect */
+.btn:active,
+.chip:active{
+  transform: translateY(1px);
+}
+
+/* ===============  RESPONSIVE TWEAKS  =============== */
+@media (prefers-reduced-motion: reduce){
+  .chip, .btn { transition: none; }
+}
+
+/* ===============  PRINT (optional)  =============== */
+@media print{
+  .page{ background: none; }
+  .card{ box-shadow: none; }
+}

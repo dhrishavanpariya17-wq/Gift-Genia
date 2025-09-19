@@ -1,0 +1,136 @@
+/* Base styles */
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(160deg, #7835cb, #ead9ff);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+/* Main container */
+.review-container {
+  background: #fff;
+  margin: 2rem;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+}
+
+.review-container h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #4a148c;
+}
+
+.subtitle {
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+/* Star rating */
+.star-rating {
+  direction: rtl;
+  display: inline-flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.star-rating input {
+  display: none;
+}
+
+.star-rating label {
+  font-size: 2rem;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.3s;
+  padding: 0 3px;
+}
+
+.star-rating input:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: #ffc107;
+}
+
+/* Review box */
+.review-text {
+  width: 100%;
+  min-height: 100px;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  resize: vertical;
+  margin-bottom: 1rem;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.review-text:focus {
+  border-color: #8947db;
+}
+
+/* Submit button */
+.submit-btn {
+  background: linear-gradient(90deg, #8947db, #9f78e8);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+/* Divider */
+.divider {
+  margin: 2rem 0;
+  border: none;
+  border-top: 1px solid #eee;
+}
+
+/* Reviews list */
+.reviews-list {
+  text-align: left;
+}
+
+.reviews-list h2 {
+  margin-bottom: 1rem;
+  color: #4a148c;
+}
+
+.review-card {
+  background: #f9f9ff;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.review-stars {
+  color: #ffc107;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.review-text-display {
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.review-author {
+  font-size: 0.9rem;
+  color: #666;
+}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GiftGenia - Your Perfect Gift Finder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="#hero-section" class="logo-link">
+                <img src="logo.jpg" alt="GiftGenia Logo" class="logo-image">
+                GiftGenia
+            </a>
+            <div class="nav-links">
+                <a href="#hero-section" class="nav-link">Home</a>
+                <a href="#how-it-works-section" class="nav-link">How it Works</a>
+                <a href="#about-us-section" class="nav-link">About Us</a>
+                <a href="login.html" class="nav-link">Login</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero-section" class="hero-section page-section">
+        <div class="container">
+            <h1>Find the Perfect Gift, Every Time.</h1>
+            <p>
+                GiftGenia uses smart recommendations to help you discover thoughtful 
+                and unique gifts for everyone on your list.
+            </p>
+            <a href="login.html" class="nav-link">
+            <button id="get-started-btn" class="btn-primary">
+                Get Started Now
+            </button></a>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features-section" class="bg-white-section page-section">
+        <div class="container">
+            <h2>Why Choose GiftGenia?</h2>
+            <div class="grid-container">
+                <div class="card">
+                    <div class="icon text-blue-500">🎁</div>
+                    <h3>Personalized Recommendations</h3>
+                    <p>
+                        Our AI analyzes preferences, interests, and occasions to 
+                        suggest gifts they'll truly love.
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="icon text-green-500">⏱️</div>
+                    <h3>Save Time & Stress</h3>
+                    <p>
+                        No more endless Browse! Find the ideal gift quickly and effortlessly.
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="icon text-purple-500">💡</div>
+                    <h3>Discover Unique Ideas</h3>
+                    <p>
+                        Explore a curated selection of gifts you might not find anywhere else.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works -->
+    <section id="how-it-works-section" class="bg-gray-100-section page-section">
+        <div class="container">
+            <h2>How GiftGenia Works</h2>
+            <div class="grid-container">
+                <div class="card">
+                    <div class="icon text-orange-500">1️⃣</div>
+                    <h3>Tell Us About Them</h3>
+                    <p>Share a few details about the recipient and the occasion.</p>
+                </div>
+                <div class="card">
+                    <div class="icon text-teal-500">2️⃣</div>
+                    <h3>Get Personalized Ideas</h3>
+                    <p>Our smart system generates a list of tailored gift suggestions.</p>
+                </div>
+                <div class="card">
+                    <div class="icon text-indigo-500">3️⃣</div>
+                    <h3>Choose & Delight!</h3>
+                    <p>Pick the perfect gift and make someone's day special.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1>About <span class="accent">GiftGenia</span></h1>
+        <p>
+          We’re on a mission to make gifting effortless. GiftGenia delivers
+          <strong>personalised gift ideas</strong> based on recipient type, occasion, and budget—so you can
+          give with confidence, every time.
+        </p>
+        <div class="hero-badges">
+          <div class="badge"><span class="num">10k+</span><span>curated ideas</span></div>
+          <div class="badge"><span class="num">95%</span><span>user satisfaction</span></div>
+          <div class="badge"><span class="num">30+</span><span>occasions covered</span></div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3>What we do</h3>
+        <p>
+          We combine a carefully curated database with smart logic to surface
+          meaningful, high-quality gifts tailored to the person and moment.
+        </p>
+        <ul class="checklist">
+          <li>Recipient-first suggestions</li>
+          <li>Occasion & budget aware</li>
+          <li>Clean, intuitive experience</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission -->
+  <section class="section">
+    <div class="container split">
+      <div class="copy">
+        <h2>Our Mission</h2>
+        <p>
+          To remove the stress from choosing gifts by delivering <em>relevant, thoughtful, and
+          timely</em> recommendations. We believe great gifts create stronger connections.
+        </p>
+      </div>
+      <div class="card">
+        <h4>How we help</h4>
+        <p>
+          Whether it’s a birthday, festival, or a milestone like a promotion, our platform
+          adapts to your needs and surfaces ideas that feel personal—not generic.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 GiftGenia. All rights reserved.</p>
+            <div>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const getStartedBtn = document.getElementById('get-started-btn');
+            getStartedBtn.addEventListener('click', () => {
+                document.querySelector('#features-section').scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+
+</body>
+</html>

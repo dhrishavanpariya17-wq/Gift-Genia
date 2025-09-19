@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GiftGenia Filter Page (Offline)</title>
+  <link rel="stylesheet" href="filter page.css">
+</head>
+<body>
+
+  <main class="page">
+    <section class="card">
+      <header class="card-head">
+        <h1 class="title">Find the Perfect Gift</h1>
+        <p class="subtitle">Refine your search with these filters.</p>
+      </header>
+
+      <form class="filters" action="#" method="get">
+        <!-- GENDER (single-select) -->
+        <fieldset class="group">
+          <legend class="group-title">Recipient's Gender</legend>
+          <div class="chips">
+            <input type="radio" name="gender" id="gender-male" class="chip-input" />
+            <label for="gender-male" class="chip">Male</label>
+
+            <input type="radio" name="gender" id="gender-female" class="chip-input" />
+            <label for="gender-female" class="chip">Female</label>
+
+            <input type="radio" name="gender" id="gender-na" class="chip-input" />
+            <label for="gender-na" class="chip">Prefer not to say</label>
+          </div>
+        </fieldset>
+
+        <!-- AGE GROUP (single-select) -->
+        <fieldset class="group">
+          <legend class="group-title">Age Group</legend>
+          <div class="chips">
+            <input type="radio" name="age" id="age-0-12" class="chip-input" />
+            <label for="age-0-12" class="chip">0-12</label>
+
+            <input type="radio" name="age" id="age-13-17" class="chip-input" />
+            <label for="age-13-17" class="chip">13-17</label>
+
+            <input type="radio" name="age" id="age-18-24" class="chip-input" />
+            <label for="age-18-24" class="chip">18-24</label>
+
+            <input type="radio" name="age" id="age-25-34" class="chip-input" />
+            <label for="age-25-34" class="chip">25-34</label>
+
+            <input type="radio" name="age" id="age-35-49" class="chip-input" />
+            <label for="age-35-49" class="chip">35-49</label>
+
+            <input type="radio" name="age" id="age-50-64" class="chip-input" />
+            <label for="age-50-64" class="chip">50-64</label>
+
+            <input type="radio" name="age" id="age-65" class="chip-input" />
+            <label for="age-65" class="chip">65+</label>
+          </div>
+        </fieldset>
+
+        <!-- RELATIONSHIP (multi-select) -->
+        <fieldset class="group">
+          <legend class="group-title">Relationship</legend>
+          <div class="chips">
+            <input type="checkbox" id="rel-friend" class="chip-input" />
+            <label for="rel-friend" class="chip">Friend</label>
+
+            <input type="checkbox" id="rel-family" class="chip-input" />
+            <label for="rel-family" class="chip">Family</label>
+
+            <input type="checkbox" id="rel-partner" class="chip-input" />
+            <label for="rel-partner" class="chip">Partner</label>
+
+            <input type="checkbox" id="rel-colleague" class="chip-input" />
+            <label for="rel-colleague" class="chip">Colleague</label>
+
+            <input type="checkbox" id="rel-client" class="chip-input" />
+            <label for="rel-client" class="chip">Client</label>
+
+            <input type="checkbox" id="rel-spouse" class="chip-input" />
+            <label for="rel-spouse" class="chip">Spouse</label>
+
+            <input type="checkbox" id="rel-sister" class="chip-input" />
+            <label for="rel-sister" class="chip">Sister</label>
+
+            <input type="checkbox" id="rel-brother" class="chip-input" />
+            <label for="rel-brother" class="chip">Brother</label>
+
+            <input type="checkbox" id="rel-mother" class="chip-input" />
+            <label for="rel-mother" class="chip">Mother</label>
+
+            <input type="checkbox" id="rel-father" class="chip-input" />
+            <label for="rel-father" class="chip">Father</label>
+          </div>
+        </fieldset>
+
+        <!-- OCCASION (multi-select) -->
+        <fieldset class="group">
+          <legend class="group-title">Occasion</legend>
+          <div class="chips">
+            <input type="checkbox" id="occ-birthday" class="chip-input" />
+            <label for="occ-birthday" class="chip">Birthday</label>
+
+            <input type="checkbox" id="occ-wedding" class="chip-input" />
+            <label for="occ-wedding" class="chip">Wedding</label>
+
+            <input type="checkbox" id="occ-anniversary" class="chip-input" />
+            <label for="occ-anniversary" class="chip">Anniversary</label>
+
+            <input type="checkbox" id="occ-graduation" class="chip-input" />
+            <label for="occ-graduation" class="chip">Graduation</label>
+
+            <input type="checkbox" id="occ-festival" class="chip-input" />
+            <label for="occ-festival" class="chip">Festival</label>
+
+            <input type="checkbox" id="occ-housewarming" class="chip-input" />
+            <label for="occ-housewarming" class="chip">Housewarming</label>
+
+            <input type="checkbox" id="occ-christmas" class="chip-input" />
+            <label for="occ-christmas" class="chip">Christmas</label>
+
+            <input type="checkbox" id="occ-newyear" class="chip-input" />
+            <label for="occ-newyear" class="chip">New Year</label>
+
+            <input type="checkbox" id="occ-diwali" class="chip-input" />
+            <label for="occ-diwali" class="chip">Diwali</label>
+
+            <input type="checkbox" id="occ-valentines" class="chip-input" />
+            <label for="occ-valentines" class="chip">Valentine’s Day</label>
+
+            <input type="checkbox" id="occ-mothersday" class="chip-input" />
+            <label for="occ-mothersday" class="chip">Mother’s Day</label>
+
+            <input type="checkbox" id="occ-retirement" class="chip-input" />
+            <label for="occ-retirement" class="chip">Retirement</label>
+
+            <input type="checkbox" id="occ-promotion" class="chip-input" />
+            <label for="occ-promotion" class="chip">Promotion</label>
+
+            <input type="checkbox" id="occ-firstjob" class="chip-input" />
+            <label for="occ-firstjob" class="chip">First Job</label>
+
+            <input type="checkbox" id="occ-newbaby" class="chip-input" />
+            <label for="occ-newbaby" class="chip">New Baby</label>
+          </div>
+        </fieldset>
+
+        <!-- PRICE (single-select) -->
+        <fieldset class="group">
+          <legend class="group-title">Price Range</legend>
+          <div class="chips">
+            <input type="radio" name="price" id="price-1" class="chip-input" />
+            <label for="price-1" class="chip">Under ₹500 </label>
+
+            <input type="radio" name="price" id="price-2" class="chip-input" />
+            <label for="price-2" class="chip">₹500–₹1000 </label>
+
+            <input type="radio" name="price" id="price-3" class="chip-input" />
+            <label for="price-3" class="chip">₹1000–₹3000 </label>
+
+            <input type="radio" name="price" id="price-4" class="chip-input" />
+            <label for="price-4" class="chip">₹3000–₹5000</label>
+
+            <input type="radio" name="price" id="price-5" class="chip-input" />
+            <label for="price-5" class="chip">₹5000+ </label>
+          </div>
+        </fieldset>
+
+        <!-- Actions -->
+        <div class="actions">
+          <button type="submit" class="btn btn-primary">Find Gifts</button>
+          <button type="reset" class="btn btn-ghost">Reset Filters</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+</body>
+</html>

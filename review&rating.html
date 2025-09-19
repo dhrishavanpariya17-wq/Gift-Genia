@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GiftGenia - Reviews & Ratings</title>
+  <link rel="stylesheet" href="review&rating.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Page Container -->
+  <div class="review-container">
+    <h1>⭐ Reviews & Ratings</h1>
+    <p class="subtitle">Share your feedback about GiftGenia!</p>
+
+    <!-- Rating Form -->
+    <form class="review-form">
+      <!-- Star Rating -->
+      <div class="star-rating">
+        <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+        <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+        <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+        <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+        <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+      </div>
+
+      <!-- Review Box -->
+      <textarea class="review-text" placeholder="Write your review here..."></textarea>
+
+      <!-- Submit Button -->
+      <button type="submit" class="submit-btn">Submit Review</button>
+    </form>
+
+    <!-- Divider -->
+    <hr class="divider">
+
+    <!-- Display Reviews -->
+    <div class="reviews-list">
+      <h2>Recent Reviews</h2>
+      
+      <!-- Example review -->
+      <div class="review-card">
+        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+        <p class="review-text-display">GiftGenia made my gift search so easy! Highly recommend.</p>
+        <span class="review-author">- Priya</span>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">⭐⭐⭐⭐</div>
+        <p class="review-text-display">Great options and smooth interface. Could use more filters.</p>
+        <span class="review-author">- Arjun</span>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
